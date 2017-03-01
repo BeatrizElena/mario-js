@@ -12,7 +12,6 @@ printPyramid(8);
  *######
  */
 function printPyramid(height) {
-  vheight = 5;
   for ( var row = 1; row <= height; row++){
     var space = "";
     var hash = "";
