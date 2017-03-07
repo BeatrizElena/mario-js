@@ -1,7 +1,11 @@
+// Mario 2 Requirements
+// TODO 1
+// create an element whose inner text is rowStr,
+// and insert it as a child of the container <div id="pyramid">
+// TODO 2
+// delete the "under construction" element, ie the <div id="notice">
 
 drawPyramid(5);
-
-
 /**
  * drawPyramid
  *
@@ -10,8 +14,7 @@ drawPyramid(5);
 function drawPyramid(height) {
 
     // TODO 2
-    // delete the "under construction" element, ie the <div id="notice">
-
+    document.getElementById("constrution").remove();
 
     // for each row....
     for (var row = 0; row < height; row++) {
@@ -29,12 +32,12 @@ function drawPyramid(height) {
             rowStr += "#";
         }
 
-        // you can delete this now
-        console.log(rowStr)
-
         // TODO 1
-        // create an element whose inner text is rowStr,
-        // and insert it as a child of the container <div id="pyramid">
+        var pyramid = document.getElementById("pyramid");
+        var chars = document.createTextNode(rowStr);
+        var blocks = document.createElement("p");
+        blocks.appendChild(chars);
+        pyramid.appendChild(blocks);
 
     }
 }
