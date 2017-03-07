@@ -13,8 +13,9 @@ drawPyramid(5);
  */
 function drawPyramid(height) {
 
-    // TODO 2
-   //  document.getElementById("constrution").remove();
+    // TODO 2: delete the "under construction" element
+   var construction = document.getElementById("pyramid");
+   container.removeChild(construction);
 
     // for each row....
     for (var row = 0; row < height; row++) {
@@ -32,14 +33,10 @@ function drawPyramid(height) {
             rowStr += "#";
         }
 
-        TODO 1
-        var pyramid = document.getElementById("pyramid");
-        var chars = document.createTextNode(rowStr);
+//         TODO 1: Create a child element of <div id="pyramid">
+        var pyramidContainer = document.getElementById("pyramid");
         var blocks = document.createElement("p");
-        blocks.appendChild(chars);
-        pyramid.appendChild(blocks);
-}
+        blocks.innerHTML = rowStr;
+        pyramidContainer.appendChild(blocks);
     }
 }
-
-
