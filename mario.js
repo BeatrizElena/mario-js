@@ -50,9 +50,9 @@ $("#draw-form").submit(function(event) {
  * Displays an error message on the text input, and colors it red
  */
 function displayError(message) {
-    // TODO 4
-    // implement displayError(message) function using jQuery
-
+    // TODO 4: implement displayError(message) function using jQuery
+	$("#height").addClass("display-error");
+    $(".error-message").text("Please try again");
 }
 
 
