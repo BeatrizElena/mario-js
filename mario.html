@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+
     <style>
         #pyramid {
             line-height: 0;
@@ -11,28 +12,40 @@
             font-family: "Courier New", monospace;
             text-align: center;
         }
-    </style>
-</head>
-<body >
-    <h1>Mario 3</h1>
 
-    <br>
+        .invalid-field {
+            border: 1px solid red;
+        }
+
+        .error-message {
+            color: red;
+        }
+    </style>
+
+</head>
+<body>
+    <h1>Mario 5</h1>
 
     <p>When you say</p>
     <p><strong>Draw a pyramid</strong></p>
     <p>I say:</p>
-
     <br>
 
-    <label>How high?</label>
-    <input type="text" id="height"/>
-    <br><br>
-    <button id="drawButton">Draw a pyramid</button>
+    <form id="draw-form">
+        <label>
+            How high?
+            <input type="text" id="height"/>
+            <label class="error-message"></label>
+        </label>
+        <br><br>
+        <input type="submit" value="Draw a pyramid"/>
+    </form>
 
     <br><br>
 
     <div id="pyramid"></div>
 
+    <script src="http://code.jquery.com/jquery-3.1.1.min.js"></script>
     <script src="mario.js"></script>
 </body>
 </html>
