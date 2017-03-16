@@ -76,9 +76,8 @@ function clearError(message) {
  */
 function drawPyramid(height) {
 
-    // TODO 2
-    // clear the old content from the #pyramid container
-
+    // TODO 2: clear the old content from the #pyramid container
+	$('#pyramid').empty();
 
     // for each row....
     for (var row = 0; row < height; row++) {
