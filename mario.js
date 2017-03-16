@@ -1,4 +1,9 @@
-
+/**Mario5 JS Requirements:
+1. insert the paragraph into the #pyramid container (last line of code)
+2. clear the old content from the #pyramid container
+3. figure out the height the user typed (replace the "5" below)
+4. implement displayError(message) function using jQuery
+*/
 
 // set a handler function for the form's submission event
 $("#draw-form").submit(function(event) {
@@ -47,7 +52,7 @@ $("#draw-form").submit(function(event) {
  */
 function displayError(message) {
     // TODO 4
-    // implement this function using jQuery
+    // implement displayError(message) function using jQuery
 
 }
 
@@ -95,8 +100,7 @@ function drawPyramid(height) {
         // make a <p> element for this row
         rowElem = $("<p>").html(rowStr);
 
-        // TODO 1
-        // insert the paragraph into the #pyramid container
-
+        // TODO 1: insert the paragraph into the #pyramid container
+		$('#pyramid').append(rowElem);
     }
 }
